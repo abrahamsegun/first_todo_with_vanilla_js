@@ -74,7 +74,7 @@ function dotask(event) {
 // }
 // console.log(capitalizerstLetter)
 
-console.log(todos)
+
   //strike through when task complated
  inputchecked.onclick=(event)=>{
   if (event.target.checked) {

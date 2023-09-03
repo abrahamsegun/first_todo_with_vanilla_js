@@ -19,7 +19,9 @@ function dotask(event) {
 
 
   // todos
+  input.value=input.value[0].toUpperCase() + input.value.slice(1).toLowerCase()
   let todos = input.value.trim();
+  
   // empty todos
 
   if (todos === "") {
@@ -31,6 +33,7 @@ function dotask(event) {
   let li = document.createElement("li");
   li.classList="liclass"
   li.textContent = todos;
+  let toupper=(todos)=>{todos[0].toUpperCase() + todos.slice(1).toLowerCase();}
   ul.append(li);
 
   //create delete button and span
@@ -49,7 +52,7 @@ function dotask(event) {
    li.append(span);
 
 
-   
+  
 
   deleteButton.onclick=(event)=>{
     deleteButton.parentElement.parentElement.remove();
@@ -64,7 +67,14 @@ function dotask(event) {
         }
        event.target.parentElement.parentElement.firstChild.textContent = newTodo;
   }
+//make fist word captital
 
+// function capitalizerstLetter (event) {
+//   return todos[0].toUpperCase() + todos.slice(1).toLowerCase();
+// }
+// console.log(capitalizerstLetter)
+
+console.log(todos)
   //strike through when task complated
  inputchecked.onclick=(event)=>{
   if (event.target.checked) {
